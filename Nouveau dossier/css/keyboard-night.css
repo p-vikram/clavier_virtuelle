@@ -1,0 +1,15 @@
+.keyBoard {
+	color: white;
+	background-color: #333333;
+}
+
+.key {
+	background-color: #000000;
+	color: white;
+}
+
+.key:hover {
+	background-color: #333333;
+	color: white;
+	box-shadow: 2px 2px 1px black;
+}
