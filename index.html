@@ -4,102 +4,333 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			rel="stylesheet"
-			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<!-- <link rel="stylesheet" href="keyboard-day.css" /> -->
-		<link rel="stylesheet" href="keyboard-night.css" />
+		<script
+      src="https://kit.fontawesome.com/9699c064e3.js"
+      crossorigin="anonymous"
+    ></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/keyboard-light.css" />
+		<!-- <link rel="stylesheet" href="css/keyboard-night.css" /> -->
 		<title>Clavier virtuel</title>
 	</head>
 	<body>
 		<header><h1>Clavier virtuel</h1></header>
 		<main>
+				<div class="text-area-container">
+						<textarea
+						  name="typing"
+						  rows="15"
+						  cols="100"
+						  id="text"
+						  value=""
+						></textarea>
+					  </div>
 			<div class="keyBoard">
 				<div class="keyboard-row">
-					<kbd class="key">
-						<i class="far fa-moon"><span class="sr-only">mode night</span></i>
+						<kbd class="key" id="mode">
+							<i class="far fa-moon" id="changeMode">
+								<span class="sr-only">changer mode</span>
+							</i>
+						</kbd>
+						<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="1"/>
 					</kbd>
-					<kbd class="key">1</kbd>
-					<kbd class="key">2</kbd>
-					<kbd class="key">3</kbd>
-					<kbd class="key">4</kbd>
-					<kbd class="key">5</kbd>
-					<kbd class="key">6</kbd>
-					<kbd class="key">7</kbd>
-					<kbd class="key">8</kbd>
-					<kbd class="key">9</kbd>
-					<kbd class="key">0</kbd>
-					<kbd class="key">
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="2"/>
+					</kbd>
+					<kbd>
+						<input
+						type="button"
+						class="key"
+						id="write"
+						value="3"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="4"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="5"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="6"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="7"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="8"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="9"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="0"/>
+					</kbd>
+					<kbd id="erase" class="key">
 						<i class="fas fa-backspace">
 							<span class="sr-only">effacer</span></i
 						>
 					</kbd>
 				</div>
 				<div class="keyboard-row">
-					<kbd class="key">
-						<i class="fas fa-exchange-alt">
-							<span class="sr-only">tabulation</span>
-						</i>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="a"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="z"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="e"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="r"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="t"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="y"/>
+						</kbd>
+						<kbd>
+							<input
+							type="button"
+							class="key"
+							id="write"
+							value="u"/>
+						</kbd>
+						<kbd>
+							<input
+								type="button"
+								class="key"
+								id="write"
+								value="i"/>
+						</kbd>
+						<kbd>
+							<input
+								type="button"
+								class="key"
+								id="write"
+								value="o"/>
+						</kbd>
+						<kbd>
+							<input
+								type="button"
+								class="key"
+								id="write"
+								value="p"/>
+						</kbd>
+					<kbd>
+					<input class="key" type="button" value="Entrée" id="enterKbd"/></kbd>
+					</div>
+				<div class="keyboard-row">
+					<kbd id="IDmonButton" class="key fas fa-lock">
+						<!-- <input type="checkbox" name="my-input" id="caplock" /> -->
+						<!-- <label for="Maj">
+							<span id="moncercle"></span> -->
+							<span class="sr-only">caps lock</span></i>
+							<!-- </label> -->
 					</kbd>
-
-					<kbd class="key">A</kbd>
-					<kbd class="key">Z</kbd>
-					<kbd class="key">E</kbd>
-					<kbd class="key">R</kbd>
-					<kbd class="key">T</kbd>
-					<kbd class="key">Y</kbd>
-					<kbd class="key">U</kbd>
-					<kbd class="key">I</kbd>
-					<kbd class="key">O</kbd>
-					<kbd class="key">P</kbd>
-					<kbd class="key">
-						<i class="fas fa-level-down-alt">
-							<span class="sr-only">entrée</span>
-						</i>
+					<kbd><input
+						type="button"
+						class="key"
+						id="write"
+						value="q"/>
 					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="s"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="d"/>
+						</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="f"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="g"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="h"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="j"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="k"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="l"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="m"/>
+						</kbd>
 				</div>
 				<div class="keyboard-row">
-					<kbd class="key">
-						<input type="checkbox" name="my-input" id="Maj" />
-						<label for="Maj">
-							<span id="moncercle"></span>
-							<i class="fas fa-lock"></i><span class="sr-only">caps lock</span></i
-							></label>
+					<kbd>
+							<span class="sr-only">shift</span>
+						<input
+							type="button"
+							class="key"
+							value="&#8593;"/>
 					</kbd>
-
-					<kbd class="key">Q</kbd>
-					<kbd class="key">S</kbd>
-					<kbd class="key">D</kbd>
-					<kbd class="key">F</kbd>
-					<kbd class="key">G</kbd>
-					<kbd class="key">H</kbd>
-					<kbd class="key">J</kbd>
-					<kbd class="key">K</kbd>
-					<kbd class="key">L</kbd>
-					<kbd class="key">M</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="w"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="x"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="c"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="v"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="b"/>
+					</kbd>
+					<kbd>
+						<input
+							type="button"
+							class="key"
+							id="write"
+							value="n"/>
+					</kbd>
+					<kbd>
+						<span class="sr-only">shift</span>
+					<input
+						type="button"
+						class="key"
+						value="&#8593;"/>
+				</kbd>
+				
 				</div>
-				<div class="keyboard-row">
-					<kbd class="key">
-						<i class="fas fa-arrow-up"> <span class="sr-only">shift</span></i>
-					</kbd>
-
-					<kbd class="key">W</kbd>
-					<kbd class="key">X</kbd>
-					<kbd class="key">C</kbd>
-					<kbd class="key">V</kbd>
-					<kbd class="key">B</kbd>
-					<kbd class="key">N</kbd>
-					<kbd class="key">
-						<i class="fas fa-arrow-up"> <span class="sr-only">shift</span></i>
-					</kbd>
+				<div class="keyboard-row space-row">
+					  <kbd>
+						<input
+							type="button"
+							id="space-key"
+							class="space key"
+							value=""/>
+						<span class="sr-only">Space</span>
+						</kbd>
 				</div>
-				<div class="keyboard-row"><kbd class="key space">espace</kbd></div>
-			</div>
 		</main>
-		<footer>©Copyright 2020 - Pannirselvame Vikram</footer>
+		<footer>©Copyright 2021 - PANNIRSELVAME Vikram</footer>
+		<script src="js/keyboard.js"></script>
 	</body>
 </html>
