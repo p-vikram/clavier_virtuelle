@@ -67,14 +67,9 @@ window.addEventListener('load', () => {
 	});
 	mode.addEventListener('click', function() {
 		if (mode.className == 'far fa-moon') {
-			// monButton.className.remove('fas fa-lock');
 			mode.className = 'far fa-sun';
 		} else if (mode.className == 'far fa-sun') {
-			// monButton.className.remove('fas fa-lock-open');
 			mode.className = 'far fa-moon';
 		}
-		// } else {
-		// 	monButton.textContent = monButton.className;
-		// }
 	});
 });
